@@ -1,5 +1,5 @@
 {
-  "name": "penny-pacer",
+  "name": "pennypace",
   "version": "0.1.0",
   "description": "Run many LLM tasks through OpenRouter under a hard dollar budget. Paces spend and degrades gracefully instead of dying. Built on Meta Muse Ember.",
   "type": "module",
@@ -22,8 +22,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_GITHUB_USER/penny-pacer.git",
-    "directory": "packages/penny-pacer"
+    "url": "git+https://github.com/YOUR_GITHUB_USER/pennypace.git",
+    "directory": "packages/pennypace"
   },
   "engines": { "node": ">=18" },
   "devDependencies": {

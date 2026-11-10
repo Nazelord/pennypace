@@ -1,6 +1,8 @@
-// Fine Print Watchdog: audits ToS / privacy policies under a hard budget with penny-pacer.
-import { createRunner, MUSE_EMBER } from "penny-pacer";
+// Fine Print Watchdog: audits ToS / privacy policies under a hard budget with pennypace.
+import { createRunner, MUSE_EMBER } from "pennypace";
 import pack from "../packs/policies.json";
+import logoMark from "../../../assets/logo-mark.png"; // bundled as binary via [[rules]] in wrangler.toml
+import favicon from "../favicon-32.png";
 
 const TIERS = [
   { name: "full", maxInputChars: 6000, maxOutputTokens: 500, reasoning: "low" },
@@ -136,7 +138,7 @@ function handleAudit(req, env) {
       tiers: TIERS,
       priority: (u) => byUrl.get(u)?.priority ?? 5,
       dryRun: dry,
-      referer: "https://github.com/penny-pacer/penny-pacer",
+      referer: "https://github.com/pennypace/pennypace",
       appTitle: "Fine Print Watchdog",
     });
     const rows = new Array(urls.length);
@@ -191,6 +193,10 @@ export default {
       return response;
     }
     if (url.pathname === "/api/pack") return Response.json(pack);
+    if (url.pathname === "/logo-mark.png" || url.pathname === "/favicon-32.png" || url.pathname === "/favicon.ico")
+      return new Response(url.pathname === "/logo-mark.png" ? logoMark : favicon, {
+        headers: { "content-type": "image/png", "cache-control": "public, max-age=86400" },
+      });
     if (url.pathname === "/") return new Response(PAGE, { headers: { "content-type": "text/html; charset=utf-8" } });
     return new Response("not found", { status: 404 });
   },
@@ -199,11 +205,13 @@ export default {
 const PAGE = String.raw`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Fine Print Watchdog</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <style>
 :root{--bg:#0b0f17;--panel:#141b28;--line:#25304a;--text:#eef2fa;--mute:#93a0ba;--good:#2ecc71;--warn:#f5b73b;--bad:#ff5d5d;--full:#4da3ff;--lite:#b78bff;--skip:#6b7690}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:18px/1.45 system-ui,Segoe UI,sans-serif}
 header,main,footer{max-width:1200px;margin:0 auto;padding:0 16px}
 h1{font-size:clamp(28px,5vw,52px);line-height:1.1;margin:28px 0 6px}
+.brand{display:flex;align-items:center;gap:12px;margin-top:20px;font-weight:800;font-size:1.3rem}.brand img{border-radius:12px}
 .sub{color:var(--mute);margin:0 0 18px;font-size:1.05rem}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
@@ -231,6 +239,7 @@ footer{color:var(--mute);text-align:center;padding:30px 16px 40px}
 .dry{display:inline-block;background:var(--warn);color:#000;font-weight:800;padding:2px 10px;border-radius:8px;font-size:.8rem;vertical-align:middle}
 </style></head><body>
 <header>
+<div class="brand"><img src="/logo-mark.png" alt="pennypace" width="64" height="64"><span>pennypace</span></div>
 <h1>Agents die when the money runs out. This one adapts.</h1>
 <p class="sub">Fine Print Watchdog audits Terms of Service &amp; privacy policies under a hard dollar budget. Shrink the budget and watch it downgrade, then triage, instead of crashing. <span id="drytag" class="dry" hidden>DRY RUN: no API calls</span></p>
 <div class="panel">
@@ -247,7 +256,7 @@ footer{color:var(--mute);text-align:center;padding:30px 16px 40px}
  <div id="cards"></div>
  <div id="final" class="panel" hidden><h2>Most risky policies</h2><ol id="rank"></ol><h2>Final report</h2><pre id="report"></pre></div>
 </main>
-<footer>Built on Meta Muse Ember via OpenRouter</footer>
+<footer>Built on Meta Muse Ember via OpenRouter | powered by pennypace</footer>
 <script>
 var $=function(id){return document.getElementById(id)};
 var dry=new URLSearchParams(location.search).get("dry")==="1";

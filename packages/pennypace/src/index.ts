@@ -1,4 +1,4 @@
-/** penny-pacer: run many LLM tasks through OpenRouter under a hard dollar budget. */
+/** pennypace: run many LLM tasks through OpenRouter under a hard dollar budget. */
 
 /** Single source of truth for the default model: Meta Muse Ember on OpenRouter. */
 export const MUSE_EMBER = "meta/muse-ember";
@@ -117,14 +117,14 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
     tiers: DEFAULT_TIERS,
     priority: (() => 0) as (item: I, index: number) => number,
     dryRun: false,
-    referer: "https://github.com/penny-pacer/penny-pacer",
-    appTitle: "penny-pacer",
+    referer: "https://github.com/pennypace/pennypace",
+    appTitle: "pennypace",
     baseUrl: "https://openrouter.ai/api/v1",
     ...Object.fromEntries(Object.entries(opts).filter(([, v]) => v !== undefined)),
   } as Required<Omit<RunnerOptions<I>, "apiKey">> & { apiKey?: string };
 
-  if (!cfg.dryRun && !cfg.apiKey) throw new Error("penny-pacer: apiKey is required unless dryRun is true");
-  if (!cfg.tiers.length) throw new Error("penny-pacer: at least one tier is required");
+  if (!cfg.dryRun && !cfg.apiKey) throw new Error("pennypace: apiKey is required unless dryRun is true");
+  if (!cfg.tiers.length) throw new Error("pennypace: at least one tier is required");
 
   // ---- state ----
   let spent = 0;

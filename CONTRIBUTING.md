@@ -5,7 +5,7 @@ Small, focused PRs welcome.
 ```bash
 npm install
 npm test          # vitest, mocked fetch, no API key needed
-npm run build     # tsc -> packages/penny-pacer/dist
+npm run build     # tsc -> packages/pennypace/dist
 npm run dev       # build + wrangler dev for the demo (add ?dry=1 to the URL for no API calls)
 ```
 

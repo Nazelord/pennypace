@@ -32,7 +32,7 @@ afterEach(() => vi.unstubAllGlobals());
 const items = (n: number) => Array.from({ length: n }, (_, i) => i);
 const spec = (i: number) => ({ prompt: "p".repeat(400) + i, json: true });
 
-describe("penny-pacer", () => {
+describe("pennypace", () => {
   it("never exceeds the budget", async () => {
     mockFetch();
     const run = createRunner({ apiKey: "k", budgetUsd: 0.001, tiers, concurrency: 8 });

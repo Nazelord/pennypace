@@ -2,5 +2,11 @@ name = "fine-print-watchdog"
 main = "src/worker.js"
 compatibility_date = "2025-06-01"
 
+# import *.png as binary (logo + favicon are served by the Worker)
+[[rules]]
+type = "Data"
+globs = ["**/*.png"]
+fallthrough = true
+
 # Secret (not stored here):  npx wrangler secret put OPENROUTER_API_KEY
 # Local real runs: put OPENROUTER_API_KEY=... in apps/watchdog/.dev.vars (gitignored)
