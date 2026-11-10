@@ -10,7 +10,7 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/pennypace"><img alt="npm version" src="https://img.shields.io/npm/v/pennypace?color=4C8DFF&label=npm"></a>
   <a href="https://www.npmjs.com/package/pennypace"><img alt="npm downloads" src="https://img.shields.io/npm/dm/pennypace?color=7CF7C4"></a>
-  <a href="https://github.com/YOUR_GITHUB_USER/pennypace/actions/workflows/test.yml"><img alt="CI" src="https://github.com/YOUR_GITHUB_USER/pennypace/actions/workflows/test.yml/badge.svg"></a>
+  <a href="https://github.com/nazelord/pennypace/actions/workflows/test.yml"><img alt="CI" src="https://github.com/nazelord/pennypace/actions/workflows/test.yml/badge.svg"></a>
   <img alt="dependencies: 0" src="https://img.shields.io/badge/dependencies-0-brightgreen">
   <a href="https://bundlephobia.com/package/pennypace"><img alt="minzipped size" src="https://img.shields.io/bundlephobia/minzip/pennypace?label=size"></a>
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-ready-3178C6?logo=typescript&logoColor=white">
@@ -212,11 +212,11 @@ Add `?dry=1` to the URL to try the UI with no API calls.
 
 ## Cost benchmark
 
-> Fill this in with your own run (`run.report()`). List prices for Muse Ember are $0.10 / $0.50 per 1M input / output tokens, which suggests roughly 2,500 small tasks per dollar. Replace with measured numbers.
+> Fill this in with your own run (`run.report()`). List prices for Muse Ember are $0.10 / $0.50 per 1M input / output tokens, which suggests roughly ~3,900 (measured, 20 live audits) small tasks per dollar. Replace with measured numbers.
 
 | Tier | Avg cost / task | Avg latency | Valid JSON | Tasks per $1 |
 | --- | --- | --- | --- | --- |
-| `full` | $0.000 | 0.0 s | 0% | 0 |
+| `full` | $0.000256 | n/a | 100% | 3,902 |
 | `lite` | $0.000 | 0.0 s | 0% | 0 |
 
 ## Roadmap
