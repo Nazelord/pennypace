@@ -172,6 +172,7 @@ export default {
 | `tiers` | `Tier[]` | full + lite | Quality levels, best first |
 | `priority` | `(item) => number` | `() => 0` | Higher survives longer |
 | `dryRun` | `boolean` | `false` | Fake outputs, no network |
+| `prices` | `{ inPerToken, outPerToken }` | Ember list prices | Per-token USD prices for `model`. The hard cap is enforced against these prices, so set them when using a model other than the default |
 
 ### `run.map(items, buildTask)`
 

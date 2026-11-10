@@ -109,6 +109,30 @@ describe("pennypace", () => {
     expect(r.errors).toBe(4);
   });
 
+  it("enforces the cap for a custom model when its prices are provided", async () => {
+    // A model at 10x the default list prices, reporting real cost via usage.cost.
+    const inP = 1e-6;
+    const outP = 5e-6;
+    mockFetch({
+      cost: (body) => {
+        const chars = body.messages.reduce((a: number, m: any) => a + m.content.length, 0);
+        return Math.ceil(chars / 4) * inP + body.max_tokens * outP;
+      },
+    });
+    const run = createRunner({
+      apiKey: "k",
+      model: "some/expensive-model",
+      budgetUsd: 0.002,
+      tiers,
+      concurrency: 8,
+      prices: { inPerToken: inP, outPerToken: outP },
+    });
+    await run.map(items(200), spec);
+    const r = run.report();
+    expect(r.spent).toBeLessThanOrEqual(0.002);
+    expect(r.skipped).toBeGreaterThan(0);
+  });
+
   it("dryRun makes zero fetch calls", async () => {
     const fn = vi.fn();
     vi.stubGlobal("fetch", fn);

@@ -34,6 +34,10 @@ export interface RunnerOptions<I = any> {
   tiers?: Tier[];
   priority?: (item: I, index: number) => number;
   dryRun?: boolean;
+  /** Per-token USD prices for the configured model. Defaults are the Muse Ember
+   *  list prices. The hard cap is enforced against these prices, so set them
+   *  whenever `model` is not the default. */
+  prices?: { inPerToken: number; outPerToken: number };
   referer?: string;
   appTitle?: string;
   baseUrl?: string;
@@ -131,6 +135,9 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
   if (!cfg.dryRun && !cfg.apiKey) throw new Error("pennypace: apiKey is required unless dryRun is true");
   if (!cfg.tiers.length) throw new Error("pennypace: at least one tier is required");
 
+  // Effective per-token prices: caller-provided for custom models, else Ember list.
+  const prices = { in: opts.prices?.inPerToken ?? LIST_IN, out: opts.prices?.outPerToken ?? LIST_OUT };
+
   // ---- state ----
   let spent = 0;
   let reserved = 0; // worst-case cost of in-flight calls
@@ -179,7 +186,7 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
     (spec.system?.length ?? 0) + Math.min(spec.prompt.length, tier.maxInputChars);
   /** Worst case: full input + every output token used. Used for the HARD cap. */
   const ceiling = (spec: TaskSpec, tier: Tier) =>
-    toks(effInChars(spec, tier)) * LIST_IN + tier.maxOutputTokens * LIST_OUT;
+    toks(effInChars(spec, tier)) * prices.in + tier.maxOutputTokens * prices.out;
   /** Pacing estimate: running average per tier, list prices until real data exists. */
   const estimate = (spec: TaskSpec, tier: Tier) => {
     const s = tierStats[tier.name];
@@ -193,7 +200,7 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
       const h = hash(prompt + (spec.system ?? "") + tier.name);
       await new Promise((r) => setTimeout(r, 10 + (h % 30)));
       const outTok = Math.floor(tier.maxOutputTokens * (0.4 + (h % 50) / 100));
-      const cost = toks(effInChars(spec, tier)) * LIST_IN + outTok * LIST_OUT;
+      const cost = toks(effInChars(spec, tier)) * prices.in + outTok * prices.out;
       const fake = spec.fake ? spec.fake() : spec.json ? { dryRun: true, n: h % 1000 } : "dry-run output";
       return { raw: typeof fake === "string" ? fake : JSON.stringify(fake), cost };
     }
@@ -235,7 +242,7 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
     const cost =
       typeof u.cost === "number"
         ? u.cost
-        : (u.prompt_tokens ?? 0) * LIST_IN + (u.completion_tokens ?? 0) * LIST_OUT;
+        : (u.prompt_tokens ?? 0) * prices.in + (u.completion_tokens ?? 0) * prices.out;
     return { raw: String(json.choices?.[0]?.message?.content ?? ""), cost, finish: json.choices?.[0]?.finish_reason };
   }
 
