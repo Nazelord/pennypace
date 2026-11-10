@@ -99,6 +99,11 @@ export function safeParseJson(text: string): unknown | undefined {
   }
 }
 
+function invalidReason(raw: string, finish?: string): string {
+  const why = finish === "length" ? " (finish_reason=length: output limit hit, reasoning may have used the tokens)" : finish ? " (finish_reason=" + finish + ")" : "";
+  return (raw.trim() ? "invalid_json" : "empty_response") + why;
+}
+
 function hash(s: string): number {
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) {
@@ -182,7 +187,7 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
   };
 
   // ---- one call ----
-  async function execute(spec: TaskSpec, tier: Tier): Promise<{ raw: string; cost: number }> {
+  async function execute(spec: TaskSpec, tier: Tier): Promise<{ raw: string; cost: number; finish?: string }> {
     const prompt = spec.prompt.slice(0, tier.maxInputChars);
     if (cfg.dryRun) {
       const h = hash(prompt + (spec.system ?? "") + tier.name);
@@ -231,13 +236,13 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
       typeof u.cost === "number"
         ? u.cost
         : (u.prompt_tokens ?? 0) * LIST_IN + (u.completion_tokens ?? 0) * LIST_OUT;
-    return { raw: String(json.choices?.[0]?.message?.content ?? ""), cost };
+    return { raw: String(json.choices?.[0]?.message?.content ?? ""), cost, finish: json.choices?.[0]?.finish_reason };
   }
 
   async function runOne(spec: TaskSpec, tier: Tier, hold: number): Promise<Result> {
     const t0 = performance.now();
     try {
-      const { raw, cost } = await execute(spec, tier);
+      const { raw, cost, finish } = await execute(spec, tier);
       const latencyMs = performance.now() - t0;
       spent += cost;
       calls++;
@@ -265,7 +270,7 @@ export function createRunner<I = any>(opts: RunnerOptions<I> = {}) {
         return { status: "ok", tier: tier.name, cost, latencyMs, data: parsed, raw };
       }
       errors++;
-      return { status: "error", tier: tier.name, cost, latencyMs, data: null, raw, error: "invalid_json" };
+      return { status: "error", tier: tier.name, cost, latencyMs, data: null, raw, error: invalidReason(raw, finish) };
     } catch (e: any) {
       errors++;
       tierCounts[tier.name]++;

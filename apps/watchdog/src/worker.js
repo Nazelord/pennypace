@@ -5,8 +5,8 @@ import logoMark from "../../../assets/logo-mark.png"; // bundled as binary via [
 import favicon from "../favicon-32.png";
 
 const TIERS = [
-  { name: "full", maxInputChars: 6000, maxOutputTokens: 500, reasoning: "low" },
-  { name: "lite", maxInputChars: 1500, maxOutputTokens: 250, reasoning: "low" },
+  { name: "full", maxInputChars: 6000, maxOutputTokens: 1200, reasoning: "minimal" },
+  { name: "lite", maxInputChars: 1500, maxOutputTokens: 600, reasoning: "minimal" },
 ];
 
 const SYSTEM = `You audit Terms of Service and privacy policies for ordinary users.
