@@ -38,7 +38,7 @@ pennypace does that for LLM calls:
 ## Install
 
 ```bash
-npm i https://github.com/Nazelord/pennypace/raw/main/releases/pennypace-0.1.0.tgz
+npm i https://raw.githubusercontent.com/Nazelord/pennypace/main/releases/pennypace-0.1.0.tgz
 ```
 
 > The npm registry release (`npm i pennypace`) is coming soon; until then install from the GitHub tarball above.
