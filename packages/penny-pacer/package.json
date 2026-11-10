@@ -1,0 +1,33 @@
+{
+  "name": "penny-pacer",
+  "version": "0.1.0",
+  "description": "Run many LLM tasks through OpenRouter under a hard dollar budget. Paces spend and degrades gracefully instead of dying. Built on Meta Muse Ember.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "keywords": ["openrouter", "llm", "budget", "cost", "agents", "batch", "muse-ember", "meta", "typescript"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_USER/penny-pacer.git",
+    "directory": "packages/penny-pacer"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

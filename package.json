@@ -1,0 +1,11 @@
+{
+  "name": "penny-pacer-monorepo",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "build": "npm run build -w penny-pacer",
+    "test": "npm test -w penny-pacer",
+    "dev": "npm run build && npm run dev -w watchdog",
+    "deploy": "npm run build && npm run deploy -w watchdog"
+  }
+}

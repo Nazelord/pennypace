@@ -1,0 +1,16 @@
+{
+  "name": "watchdog",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "penny-pacer": "*"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

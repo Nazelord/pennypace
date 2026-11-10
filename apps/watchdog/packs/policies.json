@@ -1,0 +1,502 @@
+[
+    {
+        "name":  "Google Terms",
+        "url":  "https://policies.google.com/terms",
+        "priority":  7
+    },
+    {
+        "name":  "Meta Privacy",
+        "url":  "https://www.facebook.com/privacy/policy/",
+        "priority":  10
+    },
+    {
+        "name":  "Facebook Terms",
+        "url":  "https://www.facebook.com/legal/terms",
+        "priority":  9
+    },
+    {
+        "name":  "Google Privacy",
+        "url":  "https://policies.google.com/privacy",
+        "priority":  9
+    },
+    {
+        "name":  "Instagram Privacy",
+        "url":  "https://privacycenter.instagram.com/policy",
+        "priority":  8
+    },
+    {
+        "name":  "Instagram Terms",
+        "url":  "https://help.instagram.com/581066165581870",
+        "priority":  8
+    },
+    {
+        "name":  "TikTok Terms",
+        "url":  "https://www.tiktok.com/legal/page/us/terms-of-service/en",
+        "priority":  8
+    },
+    {
+        "name":  "X Terms",
+        "url":  "https://x.com/en/tos",
+        "priority":  8
+    },
+    {
+        "name":  "Snapchat Privacy",
+        "url":  "https://values.snap.com/privacy/privacy-policy",
+        "priority":  8
+    },
+    {
+        "name":  "X Privacy",
+        "url":  "https://x.com/en/privacy",
+        "priority":  9
+    },
+    {
+        "name":  "Threads Privacy",
+        "url":  "https://help.instagram.com/515230437301944",
+        "priority":  6
+    },
+    {
+        "name":  "TikTok Privacy",
+        "url":  "https://www.tiktok.com/legal/page/us/privacy-policy/en",
+        "priority":  10
+    },
+    {
+        "name":  "Pinterest Terms",
+        "url":  "https://policy.pinterest.com/en/terms-of-service",
+        "priority":  6
+    },
+    {
+        "name":  "WhatsApp Privacy",
+        "url":  "https://www.whatsapp.com/legal/privacy-policy",
+        "priority":  8
+    },
+    {
+        "name":  "Pinterest Privacy",
+        "url":  "https://policy.pinterest.com/en/privacy-policy",
+        "priority":  7
+    },
+    {
+        "name":  "Reddit Privacy",
+        "url":  "https://www.reddit.com/policies/privacy-policy",
+        "priority":  8
+    },
+    {
+        "name":  "Discord Privacy",
+        "url":  "https://discord.com/privacy",
+        "priority":  7
+    },
+    {
+        "name":  "Signal Terms",
+        "url":  "https://signal.org/legal/",
+        "priority":  4
+    },
+    {
+        "name":  "LinkedIn Privacy",
+        "url":  "https://www.linkedin.com/legal/privacy-policy",
+        "priority":  8
+    },
+    {
+        "name":  "LinkedIn User Agreement",
+        "url":  "https://www.linkedin.com/legal/user-agreement",
+        "priority":  7
+    },
+    {
+        "name":  "Discord Terms",
+        "url":  "https://discord.com/terms",
+        "priority":  6
+    },
+    {
+        "name":  "Reddit User Agreement",
+        "url":  "https://www.redditinc.com/policies/user-agreement",
+        "priority":  7
+    },
+    {
+        "name":  "YouTube Terms",
+        "url":  "https://www.youtube.com/t/terms",
+        "priority":  7
+    },
+    {
+        "name":  "Telegram Terms",
+        "url":  "https://telegram.org/tos",
+        "priority":  5
+    },
+    {
+        "name":  "Apple Privacy",
+        "url":  "https://www.apple.com/legal/privacy/en-ww/",
+        "priority":  7
+    },
+    {
+        "name":  "Apple Media Terms",
+        "url":  "https://www.apple.com/legal/internet-services/itunes/us/terms.html",
+        "priority":  6
+    },
+    {
+        "name":  "Telegram Privacy",
+        "url":  "https://telegram.org/privacy",
+        "priority":  6
+    },
+    {
+        "name":  "Tumblr Privacy",
+        "url":  "https://www.tumblr.com/privacy/en",
+        "priority":  5
+    },
+    {
+        "name":  "Amazon Privacy",
+        "url":  "https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
+        "priority":  9
+    },
+    {
+        "name":  "Amazon Conditions of Use",
+        "url":  "https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM",
+        "priority":  7
+    },
+    {
+        "name":  "Twitch Privacy",
+        "url":  "https://www.twitch.tv/p/en/legal/privacy-notice/",
+        "priority":  6
+    },
+    {
+        "name":  "Twitch Terms",
+        "url":  "https://www.twitch.tv/p/en/legal/terms-of-service/",
+        "priority":  6
+    },
+    {
+        "name":  "Microsoft Services Agreement",
+        "url":  "https://www.microsoft.com/en-us/servicesagreement",
+        "priority":  7
+    },
+    {
+        "name":  "Netflix Terms",
+        "url":  "https://help.netflix.com/legal/termsofuse",
+        "priority":  6
+    },
+    {
+        "name":  "Netflix Privacy",
+        "url":  "https://help.netflix.com/legal/privacy",
+        "priority":  6
+    },
+    {
+        "name":  "Disney+ Subscriber Agreement",
+        "url":  "https://www.disneyplus.com/legal/subscriber-agreement",
+        "priority":  6
+    },
+    {
+        "name":  "Spotify Terms",
+        "url":  "https://www.spotify.com/us/legal/end-user-agreement/",
+        "priority":  6
+    },
+    {
+        "name":  "Spotify Privacy",
+        "url":  "https://www.spotify.com/us/legal/privacy-policy/",
+        "priority":  7
+    },
+    {
+        "name":  "Microsoft Privacy",
+        "url":  "https://privacy.microsoft.com/en-us/privacystatement",
+        "priority":  8
+    },
+    {
+        "name":  "Lyft Privacy",
+        "url":  "https://www.lyft.com/privacy",
+        "priority":  7
+    },
+    {
+        "name":  "Lyft Terms",
+        "url":  "https://www.lyft.com/terms",
+        "priority":  6
+    },
+    {
+        "name":  "Airbnb Privacy",
+        "url":  "https://www.airbnb.com/help/article/3175",
+        "priority":  7
+    },
+    {
+        "name":  "Hulu Privacy",
+        "url":  "https://www.hulu.com/privacy",
+        "priority":  5
+    },
+    {
+        "name":  "Airbnb Terms",
+        "url":  "https://www.airbnb.com/help/article/2908",
+        "priority":  6
+    },
+    {
+        "name":  "DoorDash Terms",
+        "url":  "https://help.doordash.com/legal/document?type=cx-terms-and-conditions",
+        "priority":  6
+    },
+    {
+        "name":  "OpenAI Terms",
+        "url":  "https://openai.com/policies/terms-of-use",
+        "priority":  8
+    },
+    {
+        "name":  "OpenAI Privacy",
+        "url":  "https://openai.com/policies/privacy-policy",
+        "priority":  9
+    },
+    {
+        "name":  "DoorDash Privacy",
+        "url":  "https://help.doordash.com/legal/document?type=cx-privacy-policy",
+        "priority":  7
+    },
+    {
+        "name":  "Anthropic Privacy",
+        "url":  "https://www.anthropic.com/legal/privacy",
+        "priority":  8
+    },
+    {
+        "name":  "Anthropic Consumer Terms",
+        "url":  "https://www.anthropic.com/legal/consumer-terms",
+        "priority":  8
+    },
+    {
+        "name":  "Midjourney Terms",
+        "url":  "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+        "priority":  5
+    },
+    {
+        "name":  "Booking.com Terms",
+        "url":  "https://www.booking.com/content/terms.html",
+        "priority":  5
+    },
+    {
+        "name":  "Booking.com Privacy",
+        "url":  "https://www.booking.com/content/privacy.html",
+        "priority":  6
+    },
+    {
+        "name":  "Dropbox Privacy",
+        "url":  "https://www.dropbox.com/privacy",
+        "priority":  6
+    },
+    {
+        "name":  "Dropbox Terms",
+        "url":  "https://www.dropbox.com/terms",
+        "priority":  5
+    },
+    {
+        "name":  "GitHub Privacy",
+        "url":  "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+        "priority":  5
+    },
+    {
+        "name":  "Character.AI Privacy",
+        "url":  "https://policies.character.ai/privacy",
+        "priority":  7
+    },
+    {
+        "name":  "GitHub Terms",
+        "url":  "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+        "priority":  5
+    },
+    {
+        "name":  "Slack Privacy",
+        "url":  "https://slack.com/trust/privacy/privacy-policy",
+        "priority":  5
+    },
+    {
+        "name":  "Stripe Privacy",
+        "url":  "https://stripe.com/privacy",
+        "priority":  5
+    },
+    {
+        "name":  "Mistral Terms",
+        "url":  "https://mistral.ai/terms",
+        "priority":  5
+    },
+    {
+        "name":  "Coinbase User Agreement",
+        "url":  "https://www.coinbase.com/legal/user_agreement/united_states",
+        "priority":  7
+    },
+    {
+        "name":  "Coinbase Privacy",
+        "url":  "https://www.coinbase.com/legal/privacy",
+        "priority":  7
+    },
+    {
+        "name":  "Shopify Privacy",
+        "url":  "https://www.shopify.com/legal/privacy",
+        "priority":  5
+    },
+    {
+        "name":  "Cash App Privacy",
+        "url":  "https://cash.app/legal/us/en-us/privacy",
+        "priority":  7
+    },
+    {
+        "name":  "Binance Privacy",
+        "url":  "https://www.binance.com/en/about-legal/privacy-portal",
+        "priority":  6
+    },
+    {
+        "name":  "Venmo Privacy",
+        "url":  "https://venmo.com/legal/us-privacy-policy/",
+        "priority":  7
+    },
+    {
+        "name":  "Walmart Privacy",
+        "url":  "https://corporate.walmart.com/privacy-security/walmart-privacy-notice",
+        "priority":  7
+    },
+    {
+        "name":  "Zoom Privacy",
+        "url":  "https://explore.zoom.us/en/privacy/",
+        "priority":  6
+    },
+    {
+        "name":  "Zoom Terms",
+        "url":  "https://explore.zoom.us/en/terms/",
+        "priority":  5
+    },
+    {
+        "name":  "Temu Privacy",
+        "url":  "https://www.temu.com/privacy-and-cookie-policy.html",
+        "priority":  9
+    },
+    {
+        "name":  "Target Privacy",
+        "url":  "https://www.target.com/c/target-privacy-policy/-/N-4sr7p",
+        "priority":  6
+    },
+    {
+        "name":  "eBay User Agreement",
+        "url":  "https://www.ebay.com/help/policies/member-behaviour-policies/user-agreement?id=4259",
+        "priority":  6
+    },
+    {
+        "name":  "eBay Privacy",
+        "url":  "https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260",
+        "priority":  7
+    },
+    {
+        "name":  "Shein Privacy",
+        "url":  "https://us.shein.com/Privacy-Security-Policy-a-399.html",
+        "priority":  8
+    },
+    {
+        "name":  "Hinge Privacy",
+        "url":  "https://hinge.co/privacy",
+        "priority":  7
+    },
+    {
+        "name":  "Duolingo Privacy",
+        "url":  "https://www.duolingo.com/privacy",
+        "priority":  5
+    },
+    {
+        "name":  "Duolingo Terms",
+        "url":  "https://www.duolingo.com/terms",
+        "priority":  5
+    },
+    {
+        "name":  "Strava Privacy",
+        "url":  "https://www.strava.com/legal/privacy",
+        "priority":  6
+    },
+    {
+        "name":  "Bumble Terms",
+        "url":  "https://bumble.com/en/terms",
+        "priority":  6
+    },
+    {
+        "name":  "Tinder Privacy",
+        "url":  "https://policies.tinder.com/privacy/intl/en",
+        "priority":  9
+    },
+    {
+        "name":  "Tinder Terms",
+        "url":  "https://policies.tinder.com/terms/intl/en",
+        "priority":  7
+    },
+    {
+        "name":  "Steam Privacy",
+        "url":  "https://store.steampowered.com/privacy_agreement/",
+        "priority":  6
+    },
+    {
+        "name":  "Bumble Privacy",
+        "url":  "https://bumble.com/en/privacy",
+        "priority":  8
+    },
+    {
+        "name":  "Steam Subscriber Agreement",
+        "url":  "https://store.steampowered.com/subscriber_agreement/",
+        "priority":  6
+    },
+    {
+        "name":  "Ring Privacy",
+        "url":  "https://ring.com/privacy-notice",
+        "priority":  8
+    },
+    {
+        "name":  "Wikipedia Terms",
+        "url":  "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+        "priority":  3
+    },
+    {
+        "name":  "DuckDuckGo Privacy",
+        "url":  "https://duckduckgo.com/privacy",
+        "priority":  2
+    },
+    {
+        "name":  "Grindr Privacy",
+        "url":  "https://www.grindr.com/privacy-policy",
+        "priority":  9
+    },
+    {
+        "name":  "Mozilla Privacy",
+        "url":  "https://www.mozilla.org/en-US/privacy/websites/",
+        "priority":  3
+    },
+    {
+        "name":  "Cloudflare Privacy",
+        "url":  "https://www.cloudflare.com/privacypolicy/",
+        "priority":  4
+    },
+    {
+        "name":  "Roblox Privacy",
+        "url":  "https://en.help.roblox.com/hc/en-us/articles/115004630823-Roblox-Privacy-and-Cookie-Policy-",
+        "priority":  7
+    },
+    {
+        "name":  "Proton Privacy",
+        "url":  "https://proton.me/legal/privacy",
+        "priority":  3
+    },
+    {
+        "name":  "Adobe Terms",
+        "url":  "https://www.adobe.com/legal/terms.html",
+        "priority":  6
+    },
+    {
+        "name":  "Adobe Privacy",
+        "url":  "https://www.adobe.com/privacy/policy.html",
+        "priority":  7
+    },
+    {
+        "name":  "Canva Privacy",
+        "url":  "https://www.canva.com/policies/privacy-policy/",
+        "priority":  6
+    },
+    {
+        "name":  "Equifax Privacy",
+        "url":  "https://www.equifax.com/privacy/",
+        "priority":  9
+    },
+    {
+        "name":  "23andMe Privacy",
+        "url":  "https://www.23andme.com/legal/privacy/",
+        "priority":  9
+    },
+    {
+        "name":  "Epic Games Privacy",
+        "url":  "https://www.epicgames.com/site/en-US/privacypolicy",
+        "priority":  6
+    },
+    {
+        "name":  "Salesforce Privacy",
+        "url":  "https://www.salesforce.com/company/privacy/",
+        "priority":  5
+    }
+]
